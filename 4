@@ -1,0 +1,66 @@
+import os
+import xml.etree.ElementTree as ET
+
+def load_game_questions(game_choice):
+    games_folder = r"c:\Users\acapol200\Documents\Angela Capolino Docs\2023 SAVE FOLDER\Doggy Quiz\Quizzes"
+    games = os.listdir(games_folder)
+    game = games[int(game_choice) - 1]
+    game_file = os.path.join(games_folder, game)
+    questions = []
+    tree = ET.parse(game_file)
+    root = tree.getroot()
+    for question in root.iter("Question"):
+        question_text = question.find("QuestionText").text
+        question_type = question.get("type")
+        if question_type == "multichoice":
+            answer_options = []
+            for answer in question.findall("Answer"):
+                answer_text = answer.text
+                is_correct = answer.get("name") == question.find("QuestionText").get("answer")
+                answer_options.append((answer_text, is_correct))
+            points = 1
+            questions.append((question_text, answer_options, points))
+        elif question_type == "tf":
+            answer_option = [("True", True), ("False", False)]
+            points = 1
+            questions.append((question_text, answer_option, points))
+    return questions
+
+def main():
+    print("-~-~-~-~-~-~-~------~-~-~-~-~-~-~-~-~")
+    print("----- Welcome to Doggy Trivia! -----")
+    print("-~-~-~-~-~-~-~------~-~-~-~-~-~-~-~-~")
+    name = input("Please provide your name: ")
+    print(f"Hello, {name}!")
+    choice = input("Press 'c' to choose a game or 'e' to exit. Choice: ")
+    if choice.lower() == 'c':
+        print("Choose a game from the following options:")
+        print("1. DoggyQuiz1.xml")
+        print("2. DoggyQuiz2.xml")
+        game_choice = input("Enter the number of the game you want to play: ")
+        questions = load_game_questions(game_choice)
+        score = play_game(questions)
+        print(f"\nCongratulations, {name}! Your score is {score} out of {len(questions)}.")
+    else:
+        print("Goodbye!")
+
+def play_game(questions):
+    score = 0
+    for i, (question, answer_options, points) in enumerate(questions, 1):
+        print(f"\nQuestion {i}: {question}")
+        for j, (answer, _) in enumerate(answer_options, 1):
+            print(f"{j}. {answer}")
+        answer = input("Please enter a number ")
+        if answer.isdigit() and 1 <= int(answer) <= len(answer_options):
+            selected_option = answer_options[int(answer) - 1]
+            if selected_option[1]:
+                print("Correct!")
+                score += points
+            else:
+                print("Incorrect!")
+        else:
+            print("Invalid answer. Skipping to the next question.")
+    return score
+
+if __name__ == "__main__":
+    main()
