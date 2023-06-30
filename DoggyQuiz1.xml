@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<QuizML name="Doggy Quiz 1!">
+    <Question type="multichoice" points="5">
+        <QuestionText answer="3">What is the television series named after a male collie?</QuestionText>
+        <Answer name="1">Benji</Answer>
+        <Answer name="2">Old Yeller</Answer>
+        <Answer name="3">Lassie</Answer>
+        <Answer name="4">Toto</Answer>
+    </Question>
+    <Question type="tf" points="3">
+        <QuestionText answer="1">Avocado can be poisonous to dogs.</QuestionText>
+    </Question>
+    <Question type="multichoice" points="4">
+        <QuestionText answer="4">What breed of dog is Snoopy from the Peanuts comic strip?</QuestionText>
+        <Answer name="1">Pointer</Answer>
+        <Answer name="2">English Sheepdog</Answer>
+        <Answer name="3">Basset Hound</Answer>
+        <Answer name="4">Beagle</Answer>
+       
+    </Question>
+    <Question type="tf" points="3">
+        <QuestionText answer="1">Broccoli is a dog friendly vegetable.</QuestionText>
+    </Question>
+    <Question type="multichoice" points="5">
+        <QuestionText answer="4">What is Mickey Mouse's pet dog named?</QuestionText>
+        <Answer name="1">Goofy</Answer>
+        <Answer name="2">Donald</Answer>
+        <Answer name="3">Daffy</Answer>
+        <Answer name="4">Pluto</Answer>
+    </Question>
+    <Question type="multichoice" points="10">
+        <QuestionText answer="2">What is the name of Hagrid’s dog in the Harry Potter series?</QuestionText>
+        <Answer name="1">Draco</Answer>
+        <Answer name="2">Fang</Answer>
+        <Answer name="3">Dobby</Answer>
+        <Answer name="4">Pixies</Answer>
+    </Question>
+    <Question type="tf" points="4">
+        <QuestionText answer="1">Dogs sense of smell is at least 40x better than humans.</QuestionText>
+    </Question>
+    <Question type="multichoice" points="7">
+        <QuestionText answer="1">What famous dog has a spot on his eye?</QuestionText>
+        <Answer name="1">Pete the Pup</Answer>
+        <Answer name="2">Toto</Answer>
+        <Answer name="3">Pluto</Answer>
+        <Answer name="4">Fang</Answer>
+    </Question>
+</QuizML>

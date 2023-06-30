@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<QuizML title="Doggie Quiz 2">
+    <Question type="multichoice" points="3">
+        <QuestionText answer="3">What sort of dog did Elvis sing about?</QuestionText>
+        <Answer name="1">Poodle</Answer>
+        <Answer name="2">Beagle</Answer>
+        <Answer name="3">Hound</Answer>
+        <Answer name="4">Pug</Answer>
+    </Question>
+    <Question type="tf" points="5">
+        <QuestionText answer="1">Dogs can sniff at the same time as breathing.</QuestionText>
+    </Question>
+    <Question type="tf" points="3">
+        <QuestionText answer="1">Small dogs can hear sounds in higher ranges than big dogs.</QuestionText>
+    </Question>
+    <Question type="multichoice" points="10">
+        <QuestionText answer="3">Which artist ended up letting the dogs out?</QuestionText>
+        <Answer name="1">Aerosmith</Answer>
+        <Answer name="2">Snoop Doggy Dog</Answer>
+        <Answer name="3">The Baha Men</Answer>
+        <Answer name="4">David Bowie</Answer>
+    </Question>
+</QuizML>
