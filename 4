@@ -2,7 +2,7 @@ import os
 import xml.etree.ElementTree as ET
 
 def load_game_questions(game_choice):
-    games_folder = r"c:\Users\acapol200\Documents\Angela Capolino Docs\2023 SAVE FOLDER\Doggy Quiz\Quizzes"
+    games_folder = r"xxx\Doggy Quiz\Quizzes"
     games = os.listdir(games_folder)
     game = games[int(game_choice) - 1]
     game_file = os.path.join(games_folder, game)
